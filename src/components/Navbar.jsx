@@ -8,7 +8,8 @@ function NavigationBar() {
       <Container>
         <Navbar.Brand as={Link} to="/">E-Commerce</Navbar.Brand>
         <Nav className="ms-auto">
-          <Nav.Link as={Link} to="/signin">Sign In</Nav.Link>
+        <Nav.Link as={Link} to="/add-product">ADD</Nav.Link>
+          <Nav.Link as={Link} to="/signin"> Log In</Nav.Link>
           <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link>
         </Nav>
       </Container>
