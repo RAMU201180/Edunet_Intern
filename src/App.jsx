@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ProductList from "./components/ProductList";
 import AddProduct from "./components/AddProduct";
+//import Signup from "./components/Signup.jsx";
+//import Signin from "./components/Signin";
 import Home from "./pages/Home.jsx"
 import Signin from "./pages/Signin.jsx";
 import Signup from "./pages/Signup.jsx";

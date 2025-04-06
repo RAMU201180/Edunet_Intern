@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom"; // ✅ Import useNavigate
 
 const AddProduct = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // ✅ Initialize navigate function
 
   const [product, setProduct] = useState({
     title: "",
@@ -30,12 +30,12 @@ const AddProduct = () => {
         discount: parseFloat(product.discount),
         offerPrice: parseFloat(product.offerPrice),
         rating: parseFloat(product.rating),
-        reviews: product.reviews.split(",").map((review) => review.trim()), 
+        reviews: product.reviews.split(",").map((review) => review.trim()), // Convert to array
       };
 
       await axios.post("http://localhost:5000/api/products", formattedProduct);
       alert("Product added successfully!");
-      navigate("/");
+      navigate("/"); // ✅ Redirect to Home page after successful submission
     } catch (error) {
       console.error("Error adding product:", error);
       alert("Failed to add product.");

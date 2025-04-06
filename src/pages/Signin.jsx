@@ -15,6 +15,7 @@ const Signin = () => {
     try {
       const response = await axios.post("http://localhost:5000/api/signin", credentials);
       alert("Login successful! Token: " + response.data.token);
+      // You can store the token in localStorage or state for later use
       localStorage.setItem("token", response.data.token);
       navigate("/");
     } catch (error) {
